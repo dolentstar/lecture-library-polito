@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Lecture Library for PoliTo",
+  "version": "2.3.0",
+  "description": "Unofficial. A tidier Virtual classroom for Politecnico di Torino video lectures: progress, resume, focus mode, any playback speed and 10-second skip.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Lecture Library for PoliTo",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://didattica.polito.it/pls/portal30/sviluppo.pagina_corso*"
+      ],
+      "js": [
+        "content.js",
+        "library.js"
+      ],
+      "all_frames": false,
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "short_name": "Lecture Library"
+}

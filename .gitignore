@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Packaged builds and signing keys (never commit a .pem key)
+*.zip
+*.crx
+*.pem
+
+# Editors
+.vscode/
+.idea/
